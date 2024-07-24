@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SecureCom</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
+    <header class="bg-dark text-white text-center py-3">
         <h1>SecureCom</h1>
-        <nav>
-            <a href="{{ url_for('routes.index') }}">Home</a>
-            <a href="{{ url_for('routes.encrypt') }}">Encrypt</a>
-            <a href="{{ url_for('routes.register') }}">Register</a>
-            <a href="{{ url_for('routes.sign') }}">Sign</a>
-            <a href="{{ url_for('routes.verify') }}">Verify</a>
-            <a href="{{ url_for('routes.async_communication') }}">Async Communication</a>
-            <a href="{{ url_for('routes.proof') }}">Proof of Knowledge</a>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="{{ url_for('routes.index') }}">Home</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.encrypt') }}">Encrypt</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.register') }}">Register</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.sign') }}">Sign</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.verify') }}">Verify</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.async_communication') }}">Async Communication</a>
+            <a class="nav-link text-white" href="{{ url_for('routes.proof') }}">Proof of Knowledge</a>
         </nav>
     </header>
-    <main>
+    <main class="container mt-4">
         {% block content %}{% endblock %}
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

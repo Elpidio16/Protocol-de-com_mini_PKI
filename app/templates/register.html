@@ -1,14 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Register User</h2>
-<form method="post">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <button type="submit">Register</button>
-</form>
-{% if user_data %}
-<p>Public Key: {{ user_data['public_key'] }}</p>
-<p>Private Key: {{ user_data['private_key'] }}</p>
-{% endif %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Register User</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                {% if user_data %}
+                <div class="mt-4">
+                    <h3>Generated Keys:</h3>
+                    <p><strong>Public Key:</strong> <small class="text-muted">{{ user_data['public_key'] }}</small></p>
+                    <p><strong>Private Key:</strong> <small class="text-muted">{{ user_data['private_key'] }}</small></p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

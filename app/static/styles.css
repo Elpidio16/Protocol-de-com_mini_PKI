@@ -2,19 +2,36 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
+.navbar-nav .nav-link {
+    padding: .5rem 1rem;
 }
 
-nav a {
-    color: white;
-    margin: 0 1em;
-    text-decoration: none;
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-nav .nav-link {
+        padding: .25rem 0;
+    }
 }
 
-main {
-    padding: 2em;
+.card {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
 }

@@ -1,17 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Verify Certificate</h2>
-<form method="post">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <label for="certificate">Certificate:</label>
-    <textarea id="certificate" name="certificate"></textarea>
-    <label for="signature">Signature:</label>
-    <textarea id="signature" name="signature"></textarea>
-    <button type="submit">Verify</button>
-</form>
-{% if is_valid is not none %}
-<p>Certificate is {{ 'valid' if is_valid else 'invalid' }}</p>
-{% endif %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Verify Certificate</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="certificate">Certificate:</label>
+                        <textarea class="form-control" id="certificate" name="certificate" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="signature">Signature:</label>
+                        <textarea class="form-control" id="signature" name="signature" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Verify</button>
+                </form>
+                {% if is_valid is not none %}
+                <div class="mt-4 alert {{ 'alert-success' if is_valid else 'alert-danger' }}">
+                    Certificate is {{ 'valid' if is_valid else 'invalid' }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

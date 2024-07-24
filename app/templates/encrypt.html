@@ -1,10 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Encrypt/Decrypt Messages</h2>
-<form method="post">
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea>
-    <button type="submit">Encrypt</button>
-</form>
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Encrypt/Decrypt Messages</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Encrypt</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
