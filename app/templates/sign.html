@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Sign Certificate</h2>
+<form method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">Sign</button>
+</form>
+{% if certificate %}
+<p>Certificate: {{ certificate }}</p>
+<p>Signature: {{ signature }}</p>
+{% endif %}
+{% endblock %}

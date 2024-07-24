@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Encrypt/Decrypt Messages</h2>
+<form method="post">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+    <button type="submit">Encrypt</button>
+</form>
+{% endblock %}

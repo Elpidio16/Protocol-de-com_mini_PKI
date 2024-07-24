@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Register User</h2>
+<form method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">Register</button>
+</form>
+{% if user_data %}
+<p>Public Key: {{ user_data['public_key'] }}</p>
+<p>Private Key: {{ user_data['private_key'] }}</p>
+{% endif %}
+{% endblock %}
