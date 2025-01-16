@@ -24,7 +24,7 @@ jobs:
      
       - name: Build Docker image
         run: |
-          docker build -t elpidio16/protocol-de-com_mini_pki:latest .  # Nom de l'image Docker
+          docker build -t elpidio16/protocol-de-com_mini_pki:latest . 
 
      
       - name: Push Docker image to Docker Hub
