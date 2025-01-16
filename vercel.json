@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "protocDecom", 
+  "name": "protocol-de-com-mini-pki",
   "builds": [
     {
       "src": "wsgi.py",
