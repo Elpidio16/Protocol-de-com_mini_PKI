@@ -3,7 +3,7 @@ name: Build, Push Docker Image and Deploy to Vercel
 on:
   push:
     branches:
-      - main  
+      - master  
 
 jobs:
   build-and-deploy:
