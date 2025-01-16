@@ -24,12 +24,12 @@ jobs:
      
       - name: Build Docker image
         run: |
-          docker build -t elpidio16/protocol-de-com_mini_pki:latest . 
+          docker build -t elpidio16/protocolDeCom:latest . 
 
      
       - name: Push Docker image to Docker Hub
         run: |
-          docker push elpidio16/protocol-de-com_mini_pki:latest
+          docker push elpidio16/protocolDeCom:latest
 
 
       - name: Deploy to Vercel
