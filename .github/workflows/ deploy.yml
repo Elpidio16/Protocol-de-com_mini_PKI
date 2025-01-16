@@ -32,4 +32,4 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_API_TOKEN }}
         run: |
           npm install -g vercel
-          vercel --prod --token $VERCEL_TOKEN --yes --name "protocolDeCom"  # Nom valide ici
+          vercel --prod --token $VERCEL_TOKEN --yes 
